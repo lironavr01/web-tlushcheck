@@ -1,0 +1,159 @@
+/* ===========================================================================
+   TipShift — Design tokens & base
+   Light theme: Cream + Editorial Blue (inspired by the TlushCheck app)
+   =========================================================================== */
+
+:root {
+  /* --- surfaces (warm, tonal, low-border) --- */
+  --cream: #f5efe6;          /* page background */
+  --surface: #fbf6ec;        /* default warm card */
+  --surface-white: #ffffff;  /* inputs / elevated white */
+  --surface-sunken: #efe7d9; /* wells, track backgrounds */
+  --border: #e8dECB;         /* subtle warm hairline */
+  --border-strong: #d9ccb4;
+
+  /* --- accent: editorial blue --- */
+  --blue: #1f70e1;
+  --blue-dim: #195fc3;
+  --blue-soft: #d7e6fa;      /* soft tint container */
+
+  /* --- text (warm near-black) --- */
+  --ink: #1a1410;
+  --ink-soft: #5c5140;
+  --ink-faint: #8a7e6b;
+  --on-blue: #ffffff;
+
+  /* --- semantic --- */
+  --success: #2e7d52;
+  --success-soft: #ddf0e4;
+  --error: #c62828;
+  --error-soft: #fbe3e3;
+  --warning: #b7791f;
+  --warning-soft: #faefd6;
+
+  /* --- shape --- */
+  --radius-sm: 0.625rem;
+  --radius: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+
+  /* --- elevation --- */
+  --shadow-sm: 0 1px 2px rgba(26, 20, 16, .04), 0 1px 3px rgba(26, 20, 16, .06);
+  --shadow: 0 4px 16px rgba(26, 20, 16, .06);
+  --shadow-lg: 0 12px 32px rgba(26, 20, 16, .10);
+  --glow-blue: 0 0 0 4px rgba(31, 112, 225, .12);
+
+  /* --- type --- */
+  --font: 'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* --- layout --- */
+  --app-max: 440px;          /* phone-width app shell */
+  --nav-h: 68px;
+}
+
+/* --------------------------------------------------------------------------- reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font);
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+/* RTL is set via <html dir="rtl">; these defaults assume it. */
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --------------------------------------------------------------------------- typography */
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.h-hero {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.h-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.h-section {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.text-soft  { color: var(--ink-soft); }
+.text-faint { color: var(--ink-faint); }
+.text-blue  { color: var(--blue); }
+.text-error { color: var(--error); }
+.text-success { color: var(--success); }
+
+.label-up {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* --------------------------------------------------------------------------- helpers */
+.hidden { display: none !important; } /* justified: JS view toggling */
+.center { text-align: center; }
+.row-between { display: flex; align-items: center; justify-content: space-between; }
+.stack { display: flex; flex-direction: column; }
+.gap-xs { gap: 6px; }
+.gap-sm { gap: 10px; }
+.gap-md { gap: 16px; }
+.gap-lg { gap: 24px; }
+.mt-sm { margin-top: 10px; }
+.mt-md { margin-top: 16px; }
+.mt-lg { margin-top: 24px; }
+.grow { flex: 1; }
