@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TipShift — התחברות</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/theme.css" />
+  <link rel="stylesheet" href="style/components.css" />
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <header class="auth-brand">
+        <div class="logo-mark">₪</div>
+        <h1 class="h-title">TipShift</h1>
+        <p class="tagline">ניהול משמרות, טיפים ובדיקת תלושים</p>
+      </header>
+
+      <div class="segmented" style="display:flex; width:100%; margin-bottom:18px;">
+        <button class="active grow" data-mode="login" type="button">התחברות</button>
+        <button class="grow" data-mode="register" type="button">הרשמה</button>
+      </div>
+
+      <form id="auth-form" class="stack gap-md">
+        <div class="field" id="name-field" hidden>
+          <label for="name">שם מלא</label>
+          <input class="input" id="name" name="name" type="text" placeholder="ישראל ישראלי" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="email">אימייל</label>
+          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="password">סיסמה</label>
+          <input class="input" id="password" name="password" type="password" placeholder="לפחות 6 תווים" autocomplete="current-password" required />
+        </div>
+
+        <p id="form-error" class="text-error center" style="font-size:0.85rem; min-height:1em;"></p>
+
+        <button class="btn btn-primary btn-block" id="submit-btn" type="submit">התחבר</button>
+      </form>
+
+      <p class="center text-faint" style="margin-top:16px; font-size:0.85rem;">
+        <span id="switch-text">אין לך חשבון?</span>
+        <a href="#" id="switch-link">להרשמה</a>
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
