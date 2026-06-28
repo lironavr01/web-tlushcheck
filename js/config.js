@@ -5,6 +5,6 @@ const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 
 export const API_BASE = LOCAL
   ? 'http://localhost:4000/api'
-  : 'https://tlush-web-server.vercel.app/api'; // ← updated automatically at deploy time
+  : 'https://web-tlushcheck-server.vercel.app/api'; // live server (Vercel)
 
 export const APP_NAME = 'TipShift';
