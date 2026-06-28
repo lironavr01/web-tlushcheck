@@ -1,0 +1,11 @@
+# os
+.DS_Store
+
+# vercel
+.vercel
+
+# editor
+*.log
+
+# local env (the client reads config from js/config.js, not .env)
+.env
