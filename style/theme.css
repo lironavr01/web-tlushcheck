@@ -145,7 +145,8 @@ h1, h2, h3 {
 }
 
 /* --------------------------------------------------------------------------- helpers */
-.hidden { display: none !important; } /* justified: JS view toggling */
+/* justified !important: make hidden win over component display rules (flex/grid) */
+[hidden], .hidden { display: none !important; }
 .center { text-align: center; }
 .row-between { display: flex; align-items: center; justify-content: space-between; }
 .stack { display: flex; flex-direction: column; }
